@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Rezerwacja lotu</title>
+		<script src="https://kit.fontawesome.com/2fa8380427.js" crossorigin="anonymous"></script>
+
+
+	<script defer src="bundle.js"></script><link href="main.css" rel="stylesheet"></head>
+	<body>
+<!-- Modal -->
+			<div class="modal fade" id="seatSelectModal" tabindex="-1" aria-labelledby="seatSelectModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+				  <div class="modal-content">
+					<div class="modal-header">
+					  <h5 class="modal-title" id="seatSelectModalLabel">Wybierz miejsce</h5>
+					  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<div id="selectedSeats" class="plane">
+							<div class="exit"></div>
+							<ol>
+								<li>
+									<ol class="seats">
+										<li data-seat="1A" class="seat">
+											<input type="checkbox" id="1A" value="1A">
+											<label for="1A">1A</label>
+										  </li>
+											<li data-seat="1B" class="seat">
+												<input type="checkbox" id="1B" value="1B">
+												<label for="1B">1B</label>
+											</li>
+											<li data-seat="1C" class="seat">
+												<input type="checkbox" id="1C" value="1C">
+												<label for="1C">1C</label>
+											</li>
+											<li data-seat="1D" class="seat">
+												<input type="checkbox" id="1D" value="1D">
+												<label for="1D">1D</label>
+											</li>
+											<li data-seat="1E" class="seat">
+												<input type="checkbox" id="1E" value="1E">
+												<label for="1E">1E</label>
+											</li>
+											<li data-seat="1F" class="seat">
+												<input type="checkbox" id="1F" value="1F">
+												<label for="1F">1F</label>
+											</li>
+										</ol>
+										</li>
+								<li>
+									<ol class="seats">
+										<li data-seat="2A" class="seat">
+											<input type="checkbox" id="2A" value="1A">
+											<label for="2A">2A</label>
+										  </li>
+											<li data-seat="2B" class="seat">
+												<input type="checkbox" id="2B" value="2B">
+												<label for="2B">2B</label>
+											</li>
+											<li data-seat="2C" class="seat">
+												<input type="checkbox" id="2C" value="2C">
+												<label for="2C">2C</label>
+											</li>
+											<li data-seat="2D" class="seat">
+												<input type="checkbox" id="2D" value="2D">
+												<label for="2D">2D</label>
+											</li>
+											<li data-seat="2E" class="seat">
+												<input type="checkbox" id="2E" value="2E">
+												<label for="2E">2E</label>
+											</li>
+											<li data-seat="2F" class="seat">
+												<input type="checkbox" id="2F" value="2F">
+												<label for="2F">2F</label>
+											</li>
+										</ol>
+								</li>
+								<li>
+									<ol class="seats">
+										<li data-seat="3A" class="seat">
+											<input type="checkbox" id="3A" value="3A">
+											<label for="3A">3A</label>
+										  </li>
+											<li data-seat="3B" class="seat">
+												<input type="checkbox" id="3B" value="3B">
+												<label for="3B">3B</label>
+											</li>
+											<li data-seat="3C" class="seat">
+												<input type="checkbox" id="3C" value="3C">
+												<label for="3C">3C</label>
+											</li>
+											<li data-seat="3D" class="seat">
+												<input type="checkbox" id="3D" value="3D">
+												<label for="3D">3D</label>
+											</li>
+											<li data-seat="3E" class="seat">
+												<input type="checkbox" id="3E" value="3E">
+												<label for="3E">3E</label>
+											</li>
+											<li data-seat="3F" class="seat">
+												<input type="checkbox" id="3F" value="3F">
+												<label for="3F">3F</label>
+											</li>
+										</ol>
+								</li>
+								<li>
+									<ol class="seats">
+										<li data-seat="4A" class="seat">
+											<input type="checkbox" id="4A" value="4A">
+											<label for="4A">4A</label>
+										  </li>
+											<li data-seat="4B" class="seat">
+												<input type="checkbox" id="4B" value="4B">
+												<label for="4B">4B</label>
+											</li>
+											<li data-seat="4C" class="seat">
+												<input type="checkbox" id="4C" value="4C">
+												<label for="4C">4C</label>
+											</li>
+											<li data-seat="4D" class="seat">
+												<input type="checkbox" id="4D" value="4D">
+												<label for="4D">4D</label>
+											</li>
+											<li data-seat="4E" class="seat">
+												<input type="checkbox" id="4E" value="4E">
+												<label for="4E">4E</label>
+											</li>
+											<li data-seat="4F" class="seat">
+												<input type="checkbox" id="4F" value="4F">
+												<label for="4F">4F</label>
+											</li>
+										</ol>
+								</li>
+								<li>
+									<ol class="seats">
+											<li class="seat">
+												<input type="checkbox" id="5A">
+												<label for="5A" value="5A">5A</label>
+											</li>
+											<li class="seat">
+												<input type="checkbox" id="5B" value="5B">
+												<label for="5B">5B</label>
+											</li>
+											<li class="seat">
+												<input type="checkbox" id="5C" value="5C">
+												<label for="5C">5C</label>
+											</li>
+											<li class="seat">
+												<input type="checkbox" id="5D" value="5D">
+												<label for="5D">5D</label>
+											</li>
+											<li class="seat">
+												<input type="checkbox" id="5E" value="5E">
+												<label for="5E">5E</label>
+											</li>
+											<li class="seat">
+												<input type="checkbox" id="5F" value="5F">
+												<label for="5F">5F</label>
+											</li>
+										</ol>
+								</li>
+							</ol>
+							</div>
+					</div>
+					<div class="modal-footer">
+					  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zamknij</button>
+					  <button id="reserve-button" type="button" class="btn">Potwierdź wybór</button>
+					</div>
+				  </div>
+				</div>
+			  </div>
+			  <!-- end modal -->
+<!-- NAV -->
+		<nav class="navbar fixed-top navbar-expand-md navbar-dark">
+<!-- Container wrapper -->
+  			<div class="container-fluid">
+<!-- Navbar brand -->
+    	<a class="navbar-brand" href="#">Brand</a>
+			
+			<button
+				class="navbar-toggler"
+				type="button"
+				data-bs-toggle="collapse"
+				data-bs-target="#collapsibleNavbar"
+				aria-controls="collapsibleNavbar"
+				aria-expanded="false"
+				aria-label="Toggle navigation"
+			>
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="collapsibleNavbar">
+				<ul class="navbar-nav ms-auto">
+					<li class="nav-item">
+						<a href="#" class="nav-link active">Strona główna</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link">Oferta</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link">O nas</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link">Kontakt</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+<!--END NAV -->
+		<header>
+<!-- CAROUSEL -->		
+		<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+			<div class="carousel-inner">
+			  <div class="carousel-item slide1  active">
+				
+			  </div>
+			  <div class="carousel-item slide2">
+				
+			  </div>
+			  <div class="carousel-item slide3">
+				
+			  </div>
+			
+		  
+		
+<!-- END carousel -->
+		
+	<div class="container mainForm">
+	<div class="row">
+		<div class="col-12">
+			<div class="col col-sm-12 col-md-6 top-text">
+				<h1 class="main-heading">Wyrusz z nami w niezapomniany rejs!</h1>
+			</div>
+			<div class="row align-items-center">
+				<div class="col-12 col-sm-12 col-md-6 hero-form">
+					<form action="#">
+					<div class="row">
+							<div class="col">
+								<label for="placeStart">Miejsce wylotu</label>
+								<select class="form-select" id="placeStart" required>
+								  <option selected>Katowice</option>
+								  
+								 
+								</select>
+							</div>
+							<div class="col">
+							<label for="placeEnd">Cel podróży</label>
+								<select class="form-select" id="placeEnd" required >
+								  <option value="">Cel podróży</option>
+								  <option value="Kraków">Kraków</option>
+								  <option value="Warszawa">Warszawa</option>
+								  <option value="Paryż">Paryż</option>
+								  <option value="Nowy Jork">Nowy Jork</option>
+								</select>
+							 </div>
+					</div>
+					<div class="row">
+						<div class="col">
+							<label for="ticketType">Typ biletu:</label>
+								<select id="ticketType" name="ticketType" class="form-select" required disabled>
+									<option value="">Wybierz typ biletu</option>
+								  <option value="one-way">Jedna strona</option>
+								  <option value="round-trip">Obie strony</option>
+								</select>
+							</div>
+					</div>
+					<div class="row">
+						<div class="col-6">
+							<label for="startDate" id="startDateLabel">Data wylotu</label>
+							<input type="date" class="form-control date" name="startDate" id="startDate" placeholder="DD/MM/YYYY" required >
+							</div>
+						<div class="col-6">
+							<label for="endDate" class="endDate">Data powrotu</label>
+							<input type="date" class="form-control date" name="endDate" id="endDate" placeholder="DD/MM/YYYY" required disabled>
+						</div>
+					</div>
+					<div id="hiddenForm" >
+					<div class="row">
+						<label for="num-seats">Ilość miejsc:</label>	
+						<div class="col">
+							<div class="row">
+								<div class="seat-input">
+									<button type="button" class="btn no-radius" id="minus-btn" disabled>-</button>
+									<input class="form-control text-center no-radius" type="number" id="num-seats" name="num-seats" value="1" min="1" max="10" required disabled>
+									<button type="button" class="btn no-radius" id="plus-btn" disabled>+</button>
+								  </div>
+								</div>
+						</div>
+					</div>
+					<div class="row">
+					<!-- Button trigger modal -->
+						<button id="selectSeatsButton" type="button" class="btn" data-bs-toggle="modal" data-bs-target="#seatSelectModal" >Wybierz miejsce
+						</button>	
+					</div>
+					<div class="row luggageOption form-check">
+						<p>Wybór bagażu</p>
+						<div class="row">
+							<div class="col">
+							  <label class="form-check-label" for="cabin">
+								<i class="fa fa-suitcase-rolling"></i>
+								<input class="form-check-input" type="radio" id="cabin" name="luggageSize" value="cabin" required />
+							  </label>
+							  <div class="row"><p>Bagaż podręczny</p></div> 
+							</div>
+							<div class="col">
+							  <label class="form-check-label" for="luggage">
+								<i class="fa-solid fa-cart-flatbed-suitcase"></i>
+								<input class="form-check-input" type="radio" id="luggage" name="luggageSize" value="bagazPodreczny" onclick="document.getElementById('cabin').removeAttribute('required');" />
+							  </label>
+							  <div class="row "><p>Większy bagaż</p></div> 
+							</div>
+						  </div>
+					</div>
+				<div class="row">
+					<button type="button" class="btn" id="summary" >Podsumowanie</button>
+				</div>
+			</div>
+		</form>
+				</div>
+				
+				<div class="col-12 col-sm-12 col-md-6 summary-info">
+				<div class="row" id="summaryInfo">
+					<div class="col form-control">
+						<p>Miejsce wylotu</p>
+						<h4 id="start"></h4>
+					</div>
+					<div class="col form-control">
+						<p>Miejsce lądowania</p>
+						<h4 id="end"></h4>
+						</div>
+					</div>	
+					<div class="row">
+						<div class="col">
+							<div class="row"id="airplanePic"></div>
+						</div>
+						<div class="col">
+
+						</div>		
+					
+					</div>			
+				
+				<div class="row">
+					<div class="col form-control">
+						<p>Data wylotu</p>
+						<div id="dateStart"></div>
+					</div>
+					<div class="col form-control">
+						<p>Data powrotu</p>
+						<div id="dateEnd"></div>
+					</div>
+					<div class="col form-control">
+						<p>Liczba miejsc</p>
+						<div id="numSeats"></div>
+					</div>
+					<div class="col form-control">
+						<p>Wybrane miejsca</p>
+						<div id="seatsSelected"></div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col ">
+						<p>Cena biletu</p>
+						<h4 id="ticketPrice"></h4>
+					
+					<div class="col currencyCalc form-control">
+						<label for="ammount">Sprawdź cenę biletu w innych walutach</label>
+						<input class="form-control" type="number" name="ammount" id="ammount">
+						<div class="dropdowns">
+							<select class="form-select" id="fromCurrencySelect"></select>
+							<select class="form-select" id="toCurrencySelect"></select>
+						</div>
+						<button  class="btn" type="button" id="convertButton">Przelicz</button>
+						<p id="result"></p>
+					</div>
+				</div>
+				</div>
+			
+				</div>
+				<div class="col col-sm-12 col-md-6 right-text">
+				<h1 class="main-heading">Wyrusz z nami w niezapomniany rejs!</h1>
+				</div>
+			</div>
+		</div>
+	</div>			
+	</div>
+	</div>
+</header>
+<div class="container">
+	<div class="row">
+		<div class="col">
+			<div class="card">
+				<div class="search">
+					<input type="text" class="searchBar" placeholder="Znajdź lokalizacje" id="">
+					<button id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+				</div>
+				<div class="weather">
+					<h2 class="city">Pogoda</h2>
+					<img src="..//src/img/drizzle.png" class="weather-pic">
+						<div class=><h1 class="temp">21°C</h1></div>
+						<img src="" alt="" class=""/>
+						<div class="description">Pochmurno</div>
+						<div class="humidity">Wilgotność powietrza: 60%</div>
+						<div class="wind">Prędkość wiatru: 6.2 km/h</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>	
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	</body>
+	
+</html>
