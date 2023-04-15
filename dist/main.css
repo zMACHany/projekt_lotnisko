@@ -8419,13 +8419,13 @@ textarea.form-control-lg {
   background-size: cover; }
 
 .slide1 {
-  background-image: linear-gradient(to right top, #9007799f, #8f00886e, #8c00965b, #8303a688, #7711b7ab), url(596e921da575776d4d65.jpg); }
+  background-image: linear-gradient(to right top, #9007799f, #8f00886e, #8c00965b, #8303a688, #7711b7ab), url(1438268678d1d61fe345.jpg); }
 
 .slide2 {
-  background-image: linear-gradient(to right top, #900779bb, #8f00886e, #8c00968a, #8303a6a1, #7711b777), url(06c625061b7285d7e19f.jpg); }
+  background-image: linear-gradient(to right top, #900779bb, #8f00886e, #8c00968a, #8303a6a1, #7711b777), url(a3c77b5e5f9c364f6597.jpg); }
 
 .slide3 {
-  background-image: linear-gradient(to right top, #9007799f, #8f00886e, #8c009680, #8303a698, #7711b7ab), url(6a7be4f1172d91448163.jpg); }
+  background-image: linear-gradient(to right top, #9007799f, #8f00886e, #8c009680, #8303a698, #7711b7ab), url(4f6dab1c093f4091d2c8.jpg); }
 
 header {
   height: 135vh;
@@ -8509,15 +8509,6 @@ select {
 
 .fade-in {
   animation: fadeIn 1s ease-out; }
-
-.smallPlane {
-  background-image: url(4bdd8008441c2fbfe8b8.jpg); }
-
-.midPlane {
-  background-image: url(88fc2156fcb77063d189.webp); }
-
-.bigPlane {
-  background-image: url(985cfab10e5de69fc9fb.jpg); }
 
 .plane {
   margin: 20px auto;

@@ -57,7 +57,7 @@ $btn-hover: #5c045cc9;
 			#8303a688,
 			#7711b7ab
 		),
-		url("../img/airplane-g7c0a085fd_1920.jpg");
+		url("https://cdn.pixabay.com/photo/2020/03/27/19/27/airplane-4974678_960_720.jpg");
 }
 .slide2 {
 	background-image: linear-gradient(
@@ -68,7 +68,7 @@ $btn-hover: #5c045cc9;
 			#8303a6a1,
 			#7711b777
 		),
-		url("../img/virgin-g4be1a57ab_1920.jpg");
+		url("https://cdn.pixabay.com/photo/2018/09/25/17/14/airplane-3702676_960_720.jpg");
 }
 .slide3 {
 	background-image: linear-gradient(
@@ -79,7 +79,7 @@ $btn-hover: #5c045cc9;
 			#8303a698,
 			#7711b7ab
 		),
-		url("../img/airplane-g90cf35501_1920.jpg");}
+		url("https://cdn.pixabay.com/photo/2018/04/20/16/22/silhouette-3336437_960_720.jpg");}
 // header
 
 header {
@@ -186,15 +186,6 @@ select {
     animation: fadeIn 1s ease-out;
   }
 
-  .smallPlane{
-    background-image: url(../img/Embraer_ERJ_175.jpg);
-  }
-  .midPlane{
-    background-image: url(../img/boeing.webp);
-  }
-  .bigPlane{
-    background-image: url(../img/13.jpg);
-  }
 
 
 //// seats select
@@ -355,7 +346,11 @@ select {
             font-size: 120%;
             width: calc(100% - 100px);
         }
-    }
+        .weather-icon{
+            width: 30px;
+            height: auto;
+            margin: 10px;}
+        }
 
 
 @media only screen and (max-width: 767px) {
