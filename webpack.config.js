@@ -1,5 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
 module.exports = {
 	entry: './src/index.js',
@@ -14,36 +14,34 @@ module.exports = {
 		},
 		open: true,
 		compress: true,
-		port: 3000,
+		port: 3300,
 		hot: false,
 	},
 	plugins: [
-        new HtmlWebpackPlugin({
-        template: "./src/index.html"
-        }),
-        new MiniCssExtractPlugin()
-       ] ,
+		new HtmlWebpackPlugin({
+			template: './src/index.html',
+		}),
+		new MiniCssExtractPlugin(),
+	],
 	module: {
 		rules: [
 			{
-                test: /\.scss$/,
-                use: [
-                // "style-loader",
-                MiniCssExtractPlugin.loader,
-                "css-loader",
-                "sass-loader",
-                {
-                loader: "postcss-loader",
-                options: {
-                postcssOptions: {
-                plugins: [
-                ["autoprefixer"]
-                ]
-                }
-                }
-                }
-                ]
-               },
+				test: /\.scss$/,
+				use: [
+					// "style-loader",
+					MiniCssExtractPlugin.loader,
+					'css-loader',
+					'sass-loader',
+					{
+						loader: 'postcss-loader',
+						options: {
+							postcssOptions: {
+								plugins: [['autoprefixer']],
+							},
+						},
+					},
+				],
+			},
 			{
 				test: /\.js$/,
 				exclude: /node_modules/,
@@ -57,15 +55,15 @@ module.exports = {
 			{
 				test: /\.(png|jpe?g|gif)$/i,
 				use: [
-				  {
-					loader: 'file-loader',
-					options: {
-					  name: '[name].[hash].[ext]',
-					  outputPath: 'images'
+					{
+						loader: 'file-loader',
+						options: {
+							name: '[name].[hash].[ext]',
+							outputPath: 'images',
+						},
 					},
-				  },
 				],
-			  }
+			},
 		],
 	},
 };

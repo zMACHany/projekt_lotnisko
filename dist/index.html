@@ -167,7 +167,7 @@
 					</div>
 					<div class="modal-footer">
 					  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zamknij</button>
-					  <button id="reserve-button" type="button" class="btn">Potwierdź wybór</button>
+					  <button id="reserve-button" type="button" class="btn" disabled>Potwierdź wybór</button>
 					</div>
 				  </div>
 				</div>
@@ -223,9 +223,9 @@
 			  <div class="carousel-item slide3">
 				
 			  </div>
-			
-		  
-		
+			</div>
+		</div>
+
 <!-- END carousel -->
 		
 	<div class="container mainForm">
@@ -234,7 +234,7 @@
 			<div class="col col-sm-12 col-md-6 top-text">
 				<h1 class="main-heading">Wyrusz z nami w niezapomniany rejs!</h1>
 			</div>
-			<div class="row align-items-center">
+			<div class="row">
 				<div class="col-12 col-sm-12 col-md-6 hero-form">
 					<form action="#">
 					<div class="row">
@@ -242,8 +242,6 @@
 								<label for="placeStart">Miejsce wylotu</label>
 								<select class="form-select" id="placeStart" required>
 								  <option selected>Katowice</option>
-								  
-								 
 								</select>
 							</div>
 							<div class="col">
@@ -257,158 +255,185 @@
 								</select>
 							 </div>
 					</div>
-					<div class="row">
-						<div class="col">
-							<label for="ticketType">Typ biletu:</label>
-								<select id="ticketType" name="ticketType" class="form-select" required disabled>
-									<option value="">Wybierz typ biletu</option>
-								  <option value="one-way">Jedna strona</option>
-								  <option value="round-trip">Obie strony</option>
-								</select>
-							</div>
-					</div>
-					<div class="row">
-						<div class="col-6">
-							<label for="startDate" id="startDateLabel">Data wylotu</label>
-							<input type="date" class="form-control date" name="startDate" id="startDate" placeholder="DD/MM/YYYY" required >
-							</div>
-						<div class="col-6">
-							<label for="endDate" class="endDate">Data powrotu</label>
-							<input type="date" class="form-control date" name="endDate" id="endDate" placeholder="DD/MM/YYYY" required disabled>
-						</div>
-					</div>
-					<div id="hiddenForm" >
-					<div class="row">
-						<label for="num-seats">Ilość miejsc:</label>	
-						<div class="col">
-							<div class="row">
-								<div class="seat-input">
-									<button type="button" class="btn no-radius" id="minus-btn" disabled>-</button>
-									<input class="form-control text-center no-radius" type="number" id="num-seats" name="num-seats" value="1" min="1" max="10" required disabled>
-									<button type="button" class="btn no-radius" id="plus-btn" disabled>+</button>
-								  </div>
-								</div>
-						</div>
-					</div>
-					<div class="row">
-					<!-- Button trigger modal -->
-						<button id="selectSeatsButton" type="button" class="btn" data-bs-toggle="modal" data-bs-target="#seatSelectModal" >Wybierz miejsce
-						</button>	
-					</div>
-					<div class="row luggageOption form-check">
-						<p>Wybór bagażu</p>
-						<div class="row">
-							<div class="col">
-							  <label class="form-check-label" for="cabin">
-								<i class="fa fa-suitcase-rolling"></i>
-								<input class="form-check-input" type="radio" id="cabin" name="luggageSize" value="cabin" required />
-							  </label>
-							  <div class="row"><p>Bagaż podręczny</p></div> 
-							</div>
-							<div class="col">
-							  <label class="form-check-label" for="luggage">
-								<i class="fa-solid fa-cart-flatbed-suitcase"></i>
-								<input class="form-check-input" type="radio" id="luggage" name="luggageSize" value="bagazPodreczny" onclick="document.getElementById('cabin').removeAttribute('required');" />
-							  </label>
-							  <div class="row "><p>Większy bagaż</p></div> 
-							</div>
-						  </div>
-					</div>
-				<div class="row">
-					<button type="button" class="btn" id="summary" >Podsumowanie</button>
-				</div>
-			</div>
-		</form>
-				</div>
 				
-				<div class="col-12 col-sm-12 col-md-6 summary-info">
-				<div class="row" id="summaryInfo">
-					<div class="col form-control">
-						<p>Miejsce wylotu</p>
-						<h4 id="start"></h4>
-					</div>
-					<div class="col form-control">
-						<p>Miejsce lądowania</p>
-						<h4 id="end"></h4>
-						</div>
-					</div>	
 					<div class="row">
-						<div class="col">
-							<div class="row"id="airplanePic"></div>
-						</div>
-						<div class="col">
-
-						</div>		
-					
-					</div>			
-				
-				<div class="row">
-					<div class="col form-control">
-						<p>Data wylotu</p>
-						<div id="dateStart"></div>
+						<button id="searchFlightBtn" class="btn" type="button">Szukaj lotów!</button>
 					</div>
-					<div class="col form-control">
-						<p>Data powrotu</p>
-						<div id="dateEnd"></div>
-					</div>
-					<div class="col form-control">
-						<p>Liczba miejsc</p>
-						<div id="numSeats"></div>
-					</div>
-					<div class="col form-control">
-						<p>Wybrane miejsca</p>
-						<div id="seatsSelected"></div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col ">
-						<p>Cena biletu</p>
-						<h4 id="ticketPrice"></h4>
-					
-					<div class="col currencyCalc form-control">
-						<label for="ammount">Sprawdź cenę biletu w innych walutach</label>
-						<input class="form-control" type="number" name="ammount" id="ammount">
-						<div class="dropdowns">
-							<select class="form-select" id="fromCurrencySelect"></select>
-							<select class="form-select" id="toCurrencySelect"></select>
-						</div>
-						<button  class="btn" type="button" id="convertButton">Przelicz</button>
-						<p id="result"></p>
-					</div>
-				</div>
-				</div>
-			
+					</form>
 				</div>
 				<div class="col col-sm-12 col-md-6 right-text">
 				<h1 class="main-heading">Wyrusz z nami w niezapomniany rejs!</h1>
 				</div>
-			</div>
 		</div>
 	</div>			
-	</div>
-	</div>
 </header>
-<div class="container">
-	<div class="row">
-		<div class="col">
-			<div class="card">
-				<div class="search">
-					<input type="text" class="searchBar" placeholder="Znajdź lokalizacje" id="">
-					<button id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+	<section id="formReservation">
+		<div class="container">
+			<div class="row">
+				<div class="col col-12 col-sm-12 col-md-6 reservation-form">
+					<div class="row title">
+					<h2>Podaj szczegóły Twojego lotu</h2>
+					</div>
+				<div class="row" id="summaryInfo">
+				<div class="col form-control">
+					<p>Miejsce wylotu</p>
+					<h4 id="start1"></h4>
 				</div>
-				<div class="weather">
-					<h2 class="city">Pogoda</h2>
-					<img src="/images/drizzle.png" class="weather-pic">
-						<div class=><h1 class="temp">21°C</h1></div>
-						<img src="./images/clear.png" alt="" class=""/>
-						<div class="description">Pochmurno</div>
-						<div class="humidity">Wilgotność powietrza: 60%</div>
-						<div class="wind">Prędkość wiatru: 6.2 km/h</div>
+				<div class="col form-control">
+					<p>Miejsce lądowania</p>
+					<h4 id="end1"></h4>
+					</div>
+				</div>	
+				<div class="row">
+					<div class="col">
+						<label for="ticketType">Typ biletu:</label>
+							<select id="ticketType" name="ticketType" class="form-select" required>
+								<option value="">Wybierz typ biletu</option>
+							  <option value="one-way">Jedna strona</option>
+							  <option value="round-trip">Obie strony</option>
+							</select>
+						</div>
+				</div> 
+			<div class="row">
+				<div class="col-6">
+					<label for="startDate" id="startDateLabel">Data wylotu</label>
+					<input type="date" class="form-control date" name="startDate" id="startDate" placeholder="DD/MM/YYYY" required >
+				</div>
+				<div class="col-6">
+					<label for="endDate" class="endDate">Data powrotu</label>
+					<input type="date" class="form-control date" name="endDate" id="endDate" placeholder="DD/MM/YYYY" required disabled>
+				</div>
+			</div>
+			<div class="row">
+				<label for="num-seats">Ilość miejsc:</label>	
+			<div class="col">
+				<div class="row">
+					<div class="seat-input">
+						<button type="button" class="btn no-radius" id="minus-btn" disabled>-</button>
+						<input class="form-control text-center no-radius" type="number" id="num-seats" name="num-seats" value="1" min="1" max="10" required disabled>
+						<button type="button" class="btn no-radius" id="plus-btn" disabled>+</button>
 					</div>
 				</div>
 			</div>
-			<img src="/images/airplane-g7c0a085fd_1920.jpg" alt="">
+			</div>
+			<div class="row">
+		<!-- Button trigger modal -->
+			<button id="selectSeatsButton" type="button" class="btn" data-bs-toggle="modal" data-bs-target="#seatSelectModal" >Wybierz miejsce
+			</button>	
+			</div>
+			<div class="row luggageOption form-check">
+				<p>Wybór bagażu</p>
+			<div class="row">
+				<div class="col">
+					<label class="form-check-label" for="cabin">
+					<i class="fa fa-suitcase-rolling"></i>
+					<input class="form-check-input" type="radio" id="cabin" name="luggageSize" value="cabin" required />
+					</label>
+				<div class="row"><p>Bagaż podręczny</p></div> 
+				</div>
+				<div class="col">
+					<label class="form-check-label" for="luggage">
+					<i class="fa-solid fa-cart-flatbed-suitcase"></i>
+					<input class="form-check-input" type="radio" id="luggage" name="luggageSize" value="bagazPodreczny" onclick="document.getElementById('cabin').removeAttribute('required');" />
+					</label>
+				<div class="row "><p>Większy bagaż</p></div> 
+				</div>
+			</div>
+			</div>
+			<div class="row">
+		<button type="button" class="btn" id="summary" >Podsumowanie</button>
 		</div>
+	</form>
+				</div>
+		<div class="col-12 col-sm-12 col-md-6 summary-info">
+			<div class="row">
+			<div class="col">
+				<div class="row" id="summaryInfo">
+					<div class="col ">
+						<div class="row form-control"> 
+						<p>Miejsce wylotu</p>
+						<h4 id="start"></h4>
+					</div>
+					<div class="row form-control">
+						<p>Miejsce lądowania</p>
+						<h4 id="end"></h4>
+					</div>
+					<div class="row">
+						<div class="col form-control">
+							<p>Data wylotu</p>
+							<div id="dateStart"></div>
+						</div>
+						<div id="dateEndSection" class="col form-control">
+							<p>Data powrotu</p>
+							<div id="dateEnd"></div>
+						</div>
+						<div class="row">
+						<div class="col form-control">
+							<p>Liczba miejsc</p>
+							<div id="numSeats"></div>
+						</div>
+						<div class="col form-control">
+							<p>Wybrane miejsca</p>
+							<div id="seatsSelected"></div>
+						</div>
+					</div>
+					</div>
+					</div>
+					</div>	
+						<div class="row"><img src="" id="airplanePic" alt=""></div>
+					</div>		
+				<div class="col">
+						<div class="row">
+							<div class="col">
+								<div class="card ">
+									<div class="search">
+										<input type="text" class="searchBar" placeholder="Znajdź lokalizacje" id="" >
+										<button id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+									</div>
+									<div class="weather ">
+										<h2 class="city">Pogoda</h2>
+										<img src="./images/drizzle.png" class="weather-pic">
+											<div class=><h1 class="temp">21°C</h1></div>
+											<div class="description">Pochmurno</div>
+											<div class="row ">
+												<div class="col">
+													<img src="./images/humidity.png" class="weather-icon" alt="">
+													<div class="humidity"> Wilgotność powietrza: 60%</div>
+												</div>
+												<div class="col ">
+													<img src="./images/wind.png" alt="" class="weather-icon">
+													<div class="wind"> Prędkość wiatru: 6.2 km/h</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+					</div>		
+			</div>
+		<div class="row">
+			<div class="col ">
+			<p>Cena biletu</p>
+			<h4 id="ticketPrice"></h4>
+			<div class="col currencyCalc form-control">
+				<label for="ammount">Sprawdź cenę biletu w innych walutach</label>
+				<input class="form-control" type="number" name="ammount" id="ammount">
+			<div class="dropdowns">
+				<select class="form-select" id="fromCurrencySelect"></select>
+				<select class="form-select" id="toCurrencySelect"></select>
+			</div>
+				<button  class="btn" type="button" id="convertButton">Przelicz</button>
+				<p id="result"></p>
+			</div>
+			</div>
+		</div>
+		</div>
+			</div>
+		</div>
+	</section>
+<div class="container">
+
+		
 	</div>	
 
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

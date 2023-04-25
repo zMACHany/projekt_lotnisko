@@ -10,9 +10,8 @@ $primary-btn: #830983c9;
 $btn-hover: #5c045cc9;
 
 .no-radius {
-    border-radius: 0px;
+	border-radius: 0px;
 }
-
 
 // nav
 
@@ -40,9 +39,155 @@ $btn-hover: #5c045cc9;
 	height: 100vh;
 }
 
+.btnLogin-popup {
+	width: 80px;
+	height: 35px;
+	border-radius: 6px;
+	color: #fff;
+	background-color: transparent;
+	border: 2px solid #fff;
+	transition: 0.5s;
+}
+.btnLogin-popup:hover {
+	background-color: #fff;
+	border: 2px solid #fff;
+	color: black;
+}
+
+.wrapper {
+	position: relative;
+	width: 400px;
+	height: 440px;
+	background-color: transparent;
+	border: 2px solid rgba(255, 255,255, .5 );
+	border-radius: 20px;
+	backdrop-filter: blur(20px);
+	box-shadow: 0 0 30px rgba(0,0,0, .5);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: height 0.2s ease;
+	}
+
+	.wrapper .active{
+		height: 520px;
+	}
+
+	.icon-close{
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 45px;
+		height: 45px;
+		background-color: #162938;
+		font-size: 2em;
+		color: white;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-bottom-left-radius: 20px;
+		cursor: pointer;
+		z-index: 1;
+
+	}
+	
+	.register {
+		position: absolute;
+		transform: translateX(400px);
+	}
+	.form-box{
+		width: 100%;
+		padding: 40px;
+
+		h2 {
+			font-size: 2em;
+			text-align: center;
+		}
+		
+	}
+	.input-box{
+		position: relative;
+		width: 100%;
+		height: 50px;
+		border-bottom: 2px solid #162938;
+		margin: 30px 0;
+
+		label {
+			position: absolute;
+			top: 50%;
+			left: 5px;
+			transform: translateY(-50%);
+			font-size: 1em;
+			color: #162938;
+			font-weight: 500;
+			pointer-events: none;
+			height: 100%;
+			transition: 0.5s;
+		}
+		input:focus~label,
+		input:valid~label {
+			top: -5px;
+		}
+		input{
+			width: 100%;
+			height: 100%;
+			background-color: transparent;
+			border: none;
+			outline: none;
+			font-size: 1em;
+			color: #162938;
+			font-weight: 600;
+			padding: 0 35px 0 5px;
+		}
+		.icon {
+			position: absolute;
+			right: 8px;
+			font-size: 1.2em;
+			line-height: 57px;
+		}
+	}
+	.remember-forgot {
+		font-size: .9em;
+		color: #162938;
+		font-weight: 500;
+		margin: -15px 0 15px;
+		display: flex;
+		justify-content: space-between;
+
+		label input {
+			accent-color: #162938;
+			margin-right: 3px;
+		}
+
+		a {
+			color: #162938;
+			text-decoration: none;
+		}
+		a:hover {
+			text-decoration: underline;
+		}
+	}
+	.btn-submit {
+		width: 100%;
+	}
+	.login-register{
+		font-size: 0.9em;
+		color: #162938;
+		text-align: center;
+		font-weight: 500;
+		margin: 25px 0 10px;
+	}
+
+
+
 // carousel
+.carousel {
+	position: relative;
+	height: 100vh;
+}
+
 .carousel-item {
-	height: 125vh;
+	height: 100vh;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -57,7 +202,9 @@ $btn-hover: #5c045cc9;
 			#8303a688,
 			#7711b7ab
 		),
-		url("https://cdn.pixabay.com/photo/2020/03/27/19/27/airplane-4974678_960_720.jpg");
+		url('https://cdn.pixabay.com/photo/2020/03/27/19/27/airplane-4974678_960_720.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
 }
 .slide2 {
 	background-image: linear-gradient(
@@ -68,7 +215,9 @@ $btn-hover: #5c045cc9;
 			#8303a6a1,
 			#7711b777
 		),
-		url("https://cdn.pixabay.com/photo/2018/09/25/17/14/airplane-3702676_960_720.jpg");
+		url('https://cdn.pixabay.com/photo/2018/09/25/17/14/airplane-3702676_960_720.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
 }
 .slide3 {
 	background-image: linear-gradient(
@@ -79,31 +228,36 @@ $btn-hover: #5c045cc9;
 			#8303a698,
 			#7711b7ab
 		),
-		url("https://cdn.pixabay.com/photo/2018/04/20/16/22/silhouette-3336437_960_720.jpg");}
+		url('https://cdn.pixabay.com/photo/2018/04/20/16/22/silhouette-3336437_960_720.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
 // header
 
 header {
-    height: 135vh; 
-    overflow: hidden; 
-  }
+	position: relative;
+	height: 100vh;
+	overflow: hidden;
+}
+
+section {
+	height: 100vh;
+}
 
 .mainForm {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.modal {
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
 	left: 50%;
 	transform: translateX(-50%);
-    margin-top: -20%;
-	
-}
-
-.modal {
-    position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
-	left: 50%;
-	transform: translateX(-50%);
-	
 }
 
 .main-heading {
@@ -111,271 +265,295 @@ header {
 	color: #ffffff;
 }
 .btn {
-    background-color: $primary-btn;
-    color: white;
-    transition: 0.2s ease-in-out;
+	background-color: $primary-btn;
+	color: white;
+	transition: 0.2s ease-in-out;
 }
 .btn:hover {
-    background-color: $btn-hover;
-    color: white;
+	background-color: $btn-hover;
+	color: white;
 }
 
-.btn-secondary{
-    background-color: #fff;
-    color: black;
-    transition: 0.2s ease-in-out;
+.btn-secondary {
+	background-color: #fff;
+	color: black;
+	transition: 0.2s ease-in-out;
 }
-.btn-secondary:hover{
-    background-color: #9c9999;
-    color: white;
-    
+.btn-secondary:hover {
+	background-color: #9c9999;
+	color: white;
 }
-
 
 .hero-form {
+	background-color: #ffffff;
+	padding: 45px;
+	border-radius: 20% 0%;
+	box-shadow: 8px 8px 43px 0px rgba(66, 68, 90, 1);
+	border: 3px solid $primary-btn;
+
+	.row {
+		padding-top: 10px;
+	}
+	.fa,
+	.fa-solid {
+		color: $primary-btn;
+		font-size: 3em;
+	}
+	.luggageOption {
+		border: dashed $primary-btn 3px;
+		border-radius: 5%;
+		margin-top: 15px;
+		padding-bottom: 10px;
+		text-align: center;
+	}
+	input,
+	i {
+		cursor: pointer;
+	}
+}
+.reservation-form {
+	background-color: #ffffff;
+	padding: 45px;
+	border-radius: 10% 0%;
+	box-shadow: 3px 3px 13px 0px rgba(66, 68, 90, 1);
+	border: 3px solid $primary-btn;
+	margin-top: 15px;
+
+	.row {
+		padding-top: 10px;
+	}
+	.fa,
+	.fa-solid {
+		color: $primary-btn;
+		font-size: 3em;
+	}
+	.luggageOption {
+		border: dashed $primary-btn 3px;
+		border-radius: 5%;
+		margin-top: 15px;
+		padding-bottom: 10px;
+		text-align: center;
+	}
+	input,
+	i {
+		cursor: pointer;
+	}
+}
+
+.seat-input {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+select {
+	cursor: pointer;
+}
+
+.title {
+	margin: 15px 0px;
+}
+
+.summary-info {
 	background-color: #fff;
 	padding: 25px;
 	border-radius: 3%;
 	box-shadow: 8px 8px 43px 0px rgba(66, 68, 90, 1);
-
-        .row {
-            padding-top: 10px;
-        }
-        .fa, .fa-solid {
-            color: $primary-btn;
-            font-size: 3em;
-        }
-        .luggageOption {
-            border: dashed $primary-btn 3px;
-            border-radius: 5%;
-            margin-top: 15px;
-            padding-bottom: 10px;
-            text-align: center;
-        
-            
-        }
-        input , i {
-            cursor: pointer;
-        }
-}
-
-
-  .seat-input {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-select {
-    cursor: pointer;
-}
-
-.summary-info{
-    background-color: #fff;
-	padding: 25px;
-	border-radius: 3%;
-	box-shadow: 8px 8px 43px 0px rgba(66, 68, 90, 1);
-    
-    
 }
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-  }
-  
-  .fade-in {
-    animation: fadeIn 1s ease-out;
-  }
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
 
-
+.fade-in {
+	animation: fadeIn 1s ease-out;
+}
 
 //// seats select
 
 .plane {
-    margin: 20px auto;
-    width: 300px;
-    background-color: #fff;
-    border-top-left-radius: 50%;
-    border-top-right-radius: 50%;
-    border: $primary-btn solid 5px;
-    height: 500px;
+	margin: 20px auto;
+	width: 300px;
+	background-color: #fff;
+	border-top-left-radius: 50%;
+	border-top-right-radius: 50%;
+	border: $primary-btn solid 5px;
+	height: 500px;
 
-    .exit {
-    height: 50px;
-    position: relative;
-    }
+	.exit {
+		height: 50px;
+		position: relative;
+	}
 
-    .exit:before, .exit:after {
-        content: 'EXIT';
-        font-size: 14px;
-        line-height: 18px;
-        padding: 0 2px 2px 2px;
-        display: block;
-        position: absolute;
-        background-color: red;
-        color: white;
-        top: 400%;
-        transform: translate(0,-50);
-        border-radius: 5px;
-        }
-    .exit:before{
-        left: 10px;
-    }
+	.exit:before,
+	.exit:after {
+		content: 'EXIT';
+		font-size: 14px;
+		line-height: 18px;
+		padding: 0 2px 2px 2px;
+		display: block;
+		position: absolute;
+		background-color: red;
+		color: white;
+		top: 400%;
+		transform: translate(0, -50);
+		border-radius: 5px;
+	}
+	.exit:before {
+		left: 10px;
+	}
 
-    .exit:after{
-        right: 10px;
-    }
-    ol {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-  
-    .seats {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: flex-start;
-        
-    }
+	.exit:after {
+		right: 10px;
+	}
+	ol {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
 
-    .seat{
-        display: flex;
-        flex: 0 0 14.28%;
-        padding: 5px;
-        position: relative;
-        top: 180px; 
-        left: 0px;
-        
-        label {
-            display: block;
-            position: relative;
-            width: 100%;
-            text-align: center;
-            font-size: 14px;
-            line-height: 1.5rem;
-            padding: 4px 0;
-            background-color: rgb(49, 53, 49);
-            border-radius: 5px;
-            color: #ffffff;
-            }
-            label:hover {
-                cursor: pointer;
-                box-shadow: 0 0 0px 2px green;
-            }
-        input[type=checkbox] {
-                position: absolute;
-            }
-        }
-        .seat:nth-child(3) {
-            margin-right: 14%;
-        }
-        .selected {
-            label{
-                 background-color: #18d118;
-                 color: black;
-             }}
-    }
+	.seats {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: flex-start;
+	}
+
+	.seat {
+		display: flex;
+		flex: 0 0 14.28%;
+		padding: 5px;
+		position: relative;
+		top: 180px;
+		left: 0px;
+
+		label {
+			display: block;
+			position: relative;
+			width: 100%;
+			text-align: center;
+			font-size: 14px;
+			line-height: 1.5rem;
+			padding: 4px 0;
+			background-color: rgb(49, 53, 49);
+			border-radius: 5px;
+			color: #ffffff;
+		}
+		label:hover {
+			cursor: pointer;
+			box-shadow: 0 0 0px 2px green;
+		}
+		input[type='checkbox'] {
+			position: absolute;
+		}
+	}
+	.seat:nth-child(3) {
+		margin-right: 14%;
+	}
+	.selected {
+		label {
+			background-color: #18d118;
+			color: black;
+		}
+	}
+}
 ////// currency calc
-    .currencyCalc {
-        
-        label {
-            display: block;
-            font-weight: 600;
-            margin: 5px;
-        }
-        input#ammount {
-            font-weight: 400;
-            font-size: 1.2em;
-            display: block;
-            width: 100%;
-            border-bottom: 2px solid #02002c;
-            color: #7a789d;
-        }
-        input#ammount:focus {
-            color: $primary-btn;
-            border-color: $primary-btn;
-        }
-        input, select {
-            margin: 5px;
-        }
-        .dropdowns {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-    }
+.currencyCalc {
+	label {
+		display: block;
+		font-weight: 600;
+		margin: 5px;
+	}
+	input#ammount {
+		font-weight: 400;
+		font-size: 1.2em;
+		display: block;
+		width: 100%;
+		border-bottom: 2px solid #02002c;
+		color: #7a789d;
+	}
+	input#ammount:focus {
+		color: $primary-btn;
+		border-color: $primary-btn;
+	}
+	input,
+	select {
+		margin: 5px;
+	}
+	.dropdowns {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+}
 
 //// weather app
-    .card {
-        background-color: #000000d0;
-        color: #fff;
-        padding: 2em;
-        border-radius: 30px;
-        width: 100%;
-        max-width: 420px;
-        margin: 1em;
-    
-        .search {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        button {
-            margin: 0.5em;
-            border-radius: 50%;
-            border: none;
-            height: 2.5em;
-            width: 2.5em;
-            outline: none;
-            background-color: #7c7c7c2b;
-            color: white;
-            cursor: pointer;
-            transition: 0.2s ease-in-out;
-        }
-        button:hover {
-            background-color: #7c7c7c6b;
-        }
-        input {
-            border: none;
-            outline: none;
-            padding: 0.5em 1em;
-            border-radius: 18px;
-            background-color: #7c7c7c2b;
-            color: white;
-            font-family: inherit;
-            font-size: 120%;
-            width: calc(100% - 100px);
-        }
-        .weather-icon{
-            width: 30px;
-            height: auto;
-            margin: 10px;}
-        }
+.card {
+	background-color: #000000d0;
+	color: #fff;
+	padding: 2em;
+	border-radius: 30px;
+	width: 100%;
+	max-width: 420px;
+	margin: 1em;
 
+	.search {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	button {
+		margin: 0.5em;
+		border-radius: 50%;
+		border: none;
+		height: 2.5em;
+		width: 2.5em;
+		outline: none;
+		background-color: #7c7c7c2b;
+		color: white;
+		cursor: pointer;
+		transition: 0.2s ease-in-out;
+	}
+	button:hover {
+		background-color: #7c7c7c6b;
+	}
+	input {
+		border: none;
+		outline: none;
+		padding: 0.5em 1em;
+		border-radius: 18px;
+		background-color: #7c7c7c2b;
+		color: white;
+		font-family: inherit;
+		font-size: 120%;
+		width: calc(100% - 100px);
+	}
+	.weather-icon {
+		width: 30px;
+		height: auto;
+		margin: 10px;
+	}
+}
 
 @media only screen and (max-width: 767px) {
-	header {
-    height: 200vh;
-    }
-    .carousel-item {
-        height: 300vh;
-    }
-    .right-text {
+	.hero-form {
+		width: 90%;
+		margin: 20px;
+	}
+
+	.right-text {
 		display: none;
 	}
-	.hero-form {
-		margin-top: -200vh;
-	}
-    .summary-info{
-        margin-top: -60vh;
-    }
+
 	.main-heading {
 		font-size: 2.4rem;
 		text-align: center;
 	}
 	.slider {
 		position: absolute;
-		margin-top: -250px;
 	}
 	.navbar {
 		padding: 10px;
@@ -387,27 +565,13 @@ select {
 	}
 }
 @media only screen and (min-width: 767px) and (max-width: 1000px) {
-	
-    .main-heading {
+	.main-heading {
 		font-size: 2.3rem;
-    }
-    header {
-            height: 210vh;  
-        }
-    .carousel-item {
-            height: 210vh;}
-    .hero-form {
-            margin-top: -40vh;
-    }
-    .summary-info{
-            margin-top: -50vh;
-    }
-	
+	}
 }
-@media only screen and (min-width: 1000px)  {
+@media only screen and (min-width: 1000px) {
 	.slider {
 		position: absolute;
 		margin-top: -250px;
 	}
 }
-
