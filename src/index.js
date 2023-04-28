@@ -50,8 +50,6 @@ searchFlightsBtn.addEventListener('click', () => {
 	document.getElementById('end1').innerHTML = placeEnd;
 });
 
-
-
 //date blocked
 const ticketTypeSelect = document.getElementById('ticketType');
 const startDateInput = document.getElementById('startDate');
@@ -144,7 +142,7 @@ minusBtn.addEventListener('click', () => {
 
 plusBtn.addEventListener('click', () => {
 	//  increase the input value by 1
-	numSeatsInput.value = parseInt(numSeatsInput.value) + 1;
+	numSeatsInput.value =  Math.min(parseInt(numSeatsInput.value) + 1, 10);
 	// updating the maximum number of seats
 	maxNumSeats = parseInt(numSeatsInput.value);
 });
@@ -464,18 +462,17 @@ function handleLoginFormSubmit(event) {
 	localStorage.setItem('seatsNum', seatsNum);
 	localStorage.setItem('ticketType', ticketType);
 	localStorage.setItem('ticketPrice', ticketPrice);
-  
+
 	window.location.href = 'podsumowanie.html';
-  }
-  
-  const loginForm = document.getElementById('loginForm');
-  if (loginForm) {
+}
+
+const loginForm = document.getElementById('loginForm');
+if (loginForm) {
 	loginForm.addEventListener('submit', handleLoginFormSubmit);
-  };
+}
 
 const coursorPlane = document.querySelector('.coursorPlane');
-document.addEventListener("mousemove", (e) =>{
-	let x = e.pageX +'px';
-	let y = e.pageY +'px';
+document.addEventListener('mousemove', (e) => {
+	let x = e.pageX + 'px';
+	let y = e.pageY + 'px';
 });
-

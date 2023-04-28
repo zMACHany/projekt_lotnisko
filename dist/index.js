@@ -19636,7 +19636,7 @@ minusBtn.addEventListener('click', function () {
 });
 plusBtn.addEventListener('click', function () {
   //  increase the input value by 1
-  numSeatsInput.value = parseInt(numSeatsInput.value) + 1;
+  numSeatsInput.value = Math.min(parseInt(numSeatsInput.value) + 1, 10);
   // updating the maximum number of seats
   maxNumSeats = parseInt(numSeatsInput.value);
 });
@@ -19948,9 +19948,8 @@ var loginForm = document.getElementById('loginForm');
 if (loginForm) {
   loginForm.addEventListener('submit', handleLoginFormSubmit);
 }
-;
 var coursorPlane = document.querySelector('.coursorPlane');
-document.addEventListener("mousemove", function (e) {
+document.addEventListener('mousemove', function (e) {
   var x = e.pageX + 'px';
   var y = e.pageY + 'px';
 });

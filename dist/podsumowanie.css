@@ -8819,6 +8819,8 @@ select {
     width: 90%;
     margin: 20px; }
   .carousel-item {
+    height: 100vh; }
+  .summaryCarousel {
     height: 180vh; }
   .right-text {
     display: none; }
