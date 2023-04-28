@@ -15,7 +15,6 @@ import fog from '../src/images/fog.png';
 import humidity from '../src/images/humidity.png';
 import boeing787 from '../src/images/13.jpg';
 import boeing737 from '../src/images/737.jpg';
-
 import embarer from '../src/images/Embraer_ERJ_175.jpg';
 
 //// nav
@@ -51,6 +50,8 @@ searchFlightsBtn.addEventListener('click', () => {
 	document.getElementById('end1').innerHTML = placeEnd;
 });
 
+
+
 //date blocked
 const ticketTypeSelect = document.getElementById('ticketType');
 const startDateInput = document.getElementById('startDate');
@@ -74,7 +75,7 @@ endDateLabel.style.display = 'none';
 // Show or hide return date input field depending on ticket type
 ticketTypeSelect.addEventListener('change', () => {
 	const ticketType = ticketTypeSelect.value;
-	if (ticketType === 'one-way') {
+	if (ticketType === 'Jedna-strona') {
 		startDateInput.style.display = 'block';
 		startDatelabel.style.display = 'block';
 		startDateInput.required = true;
@@ -82,7 +83,7 @@ ticketTypeSelect.addEventListener('change', () => {
 		endDateLabel.style.display = 'none';
 		endDateInput.required = false;
 		dateEndSection.style.display = 'none';
-	} else if (ticketType === 'round-trip') {
+	} else if (ticketType === 'Obie-strony') {
 		startDateInput.style.display = 'block';
 		startDatelabel.style.display = 'block';
 		startDateInput.required = true;
@@ -201,6 +202,8 @@ saveButton.addEventListener('click', () => {
 		(checkbox) => checkbox.value
 	);
 	selectedSeats = selectedSeats.concat(checkedSeats);
+	localStorage.setItem('selectedSeats', selectedSeats);
+	console.log(selectedSeats);
 	closeModal();
 });
 function closeModal() {
@@ -212,6 +215,7 @@ function closeModal() {
 function clearSelectedSeats() {
 	selectedSeats = [];
 }
+
 ///// disable/enable option
 const input1 = document.querySelector('#placeEnd');
 input1.addEventListener('input', () => {
@@ -405,41 +409,73 @@ searchBox.addEventListener('keydown', (event) => {
 
 //// popup login form
 
-$(document).ready(function(){
-	//Zmienne
+$(document).ready(function () {
 	var modal = $('.wrapper');
 	var loginLink = $('.login-link');
 	var registerLink = $('.register-link');
 	var closeBtn = $('.icon-close');
-	
+
 	//Funkcje
 	function closeModal() {
-	  modal.fadeOut();
+		modal.fadeOut();
 	}
-  
+
 	function openLogin() {
-	  modal.find('.register').fadeOut();
-	  modal.find('.login').fadeIn();
+		modal.find('.register').fadeOut();
+		modal.find('.login').fadeIn();
 	}
-  
+
 	function openRegister() {
-	  modal.find('.login').fadeOut();
-	  modal.find('.register').fadeIn();
+		modal.find('.login').fadeOut();
+		modal.find('.register').fadeIn();
 	}
-  
-	//Eventy
-	loginLink.on('click', function(){
-	  modal.fadeIn();
-	  openLogin();
+
+	//Events
+	loginLink.on('click', function () {
+		modal.fadeIn();
+		openLogin();
 	});
-  
-	registerLink.on('click', function(){
-	  modal.fadeIn();
-	  openRegister();
+
+	registerLink.on('click', function () {
+		modal.fadeIn();
+		openRegister();
 	});
-  
-	closeBtn.on('click', function(){
-	  closeModal();
+
+	closeBtn.on('click', function () {
+		closeModal();
 	});
- });
- 
+});
+
+/////// forms
+function handleLoginFormSubmit(event) {
+	event.preventDefault();
+	const placeStart = document.getElementById('placeStart').value;
+	const placeEnd = document.getElementById('placeEnd').value;
+	const startDate = document.getElementById('startDate').value;
+	const endDate = document.getElementById('endDate').value;
+	const seatsNum = document.getElementById('num-seats').value;
+	const ticketType = document.getElementById('ticketType').value;
+	const ticketPrice = document.getElementById('ticketPrice').textContent;
+
+	localStorage.setItem('placeStart', placeStart);
+	localStorage.setItem('placeEnd', placeEnd);
+	localStorage.setItem('startDate', startDate);
+	localStorage.setItem('endDate', endDate);
+	localStorage.setItem('seatsNum', seatsNum);
+	localStorage.setItem('ticketType', ticketType);
+	localStorage.setItem('ticketPrice', ticketPrice);
+  
+	window.location.href = 'podsumowanie.html';
+  }
+  
+  const loginForm = document.getElementById('loginForm');
+  if (loginForm) {
+	loginForm.addEventListener('submit', handleLoginFormSubmit);
+  };
+
+const coursorPlane = document.querySelector('.coursorPlane');
+document.addEventListener("mousemove", (e) =>{
+	let x = e.pageX +'px';
+	let y = e.pageY +'px';
+});
+

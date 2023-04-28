@@ -53,27 +53,7 @@ $btn-hover: #5c045cc9;
 	border: 2px solid #fff;
 	color: black;
 }
-
-.wrapper {
-	position: relative;
-	width: 400px;
-	height: 440px;
-	background-color: transparent;
-	border: 2px solid rgba(255, 255,255, .5 );
-	border-radius: 20px;
-	backdrop-filter: blur(20px);
-	box-shadow: 0 0 30px rgba(0,0,0, .5);
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	transition: height 0.2s ease;
-	}
-
-	.wrapper .active{
-		height: 520px;
-	}
-
-	.icon-close{
+.icon-close{
 		position: absolute;
 		top: 0;
 		right: 0;
@@ -88,14 +68,10 @@ $btn-hover: #5c045cc9;
 		border-bottom-left-radius: 20px;
 		cursor: pointer;
 		z-index: 1;
-
 	}
 	
-	.register {
-		position: absolute;
-		transform: translateX(400px);
-	}
-	.form-box{
+	
+.form-box{
 		width: 100%;
 		padding: 40px;
 
@@ -105,14 +81,15 @@ $btn-hover: #5c045cc9;
 		}
 		
 	}
-	.input-box{
+
+.input-box{
 		position: relative;
 		width: 100%;
 		height: 50px;
 		border-bottom: 2px solid #162938;
 		margin: 30px 0;
 
-		label {
+	label {
 			position: absolute;
 			top: 50%;
 			left: 5px;
@@ -123,27 +100,28 @@ $btn-hover: #5c045cc9;
 			pointer-events: none;
 			height: 100%;
 			transition: 0.5s;
-		}
-		input:focus~label,
-		input:valid~label {
-			top: -5px;
-		}
-		input{
-			width: 100%;
-			height: 100%;
-			background-color: transparent;
-			border: none;
-			outline: none;
-			font-size: 1em;
-			color: #162938;
-			font-weight: 600;
-			padding: 0 35px 0 5px;
-		}
-		.icon {
-			position: absolute;
-			right: 8px;
-			font-size: 1.2em;
-			line-height: 57px;
+	}
+	input:focus~label,
+	input:valid~label {
+		top: -5px;
+	}
+	input{
+		width: 100%;
+		height: 100%;
+		background-color: transparent;
+		border: none;
+		outline: none;
+		font-size: 1em;
+		color: #162938;
+		font-weight: 600;
+		padding: 0 35px 0 5px;
+		
+	}
+	.icon {
+		position: absolute;
+		right: 8px;
+		font-size: 1.2em;
+		line-height: 57px;
 		}
 	}
 	.remember-forgot {
@@ -154,18 +132,18 @@ $btn-hover: #5c045cc9;
 		display: flex;
 		justify-content: space-between;
 
-		label input {
-			accent-color: #162938;
-			margin-right: 3px;
+	label input {
+		accent-color: #162938;
+		margin-right: 3px;
 		}
 
-		a {
-			color: #162938;
-			text-decoration: none;
-		}
-		a:hover {
+	a {
+		color: #162938;
+		text-decoration: none;
+	}
+	a:hover {
 			text-decoration: underline;
-		}
+	}
 	}
 	.btn-submit {
 		width: 100%;
@@ -177,8 +155,10 @@ $btn-hover: #5c045cc9;
 		font-weight: 500;
 		margin: 25px 0 10px;
 	}
-
-
+	.input-margin{
+		margin:30px 15px ;
+	}
+	
 
 // carousel
 .carousel {
@@ -239,10 +219,12 @@ header {
 	position: relative;
 	height: 100vh;
 	overflow: hidden;
+
 }
 
 section {
-	height: 100vh;
+	height: fit-content;
+
 }
 
 .mainForm {
@@ -272,6 +254,7 @@ section {
 .btn:hover {
 	background-color: $btn-hover;
 	color: white;
+	border-color:  #fff;
 }
 
 .btn-secondary {
@@ -282,6 +265,26 @@ section {
 .btn-secondary:hover {
 	background-color: #9c9999;
 	color: white;
+}
+
+.formSummary {
+	background-color: $btn-hover;
+	padding: 45px;
+	border-radius: 8%;
+	box-shadow: 15px 15px 150px 0px $primary-btn;
+	border: 3px solid $primary-btn;
+	color: #fff;
+
+	.row {
+		margin: 10px;
+	}
+}
+
+#planePic1 {
+	width: 100%;
+	height: auto;
+	margin: 15px;
+	
 }
 
 .hero-form {
@@ -490,7 +493,7 @@ select {
 	}
 }
 
-//// weather app
+//// weather app 1
 .card {
 	background-color: #000000d0;
 	color: #fff;
@@ -498,8 +501,7 @@ select {
 	border-radius: 30px;
 	width: 100%;
 	max-width: 420px;
-	margin: 1em;
-
+	text-align: center;
 	.search {
 		display: flex;
 		align-items: center;
@@ -535,8 +537,25 @@ select {
 		width: 30px;
 		height: auto;
 		margin: 10px;
+		text-align: center;
 	}
 }
+
+//// weather app 2
+.searchButton{
+	margin: 0.5em;
+		border-radius: 50%;
+		border: none;
+		height: 2.5em;
+		width: 2.5em;
+		outline: none;
+		background-color: #7c7c7c2b;
+		color: white;
+		cursor: pointer;
+		transition: 0.2s ease-in-out;
+}
+
+
 
 @media only screen and (max-width: 767px) {
 	.hero-form {

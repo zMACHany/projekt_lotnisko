@@ -32,7 +32,7 @@
 				  <!-- Tab panes -->
 				  <div class="tab-content" id="myTabContent">
 					<div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
-					  <form>
+					  <form action="./podsumowanie.html"  id="loginForm">
 						<div class="input-box">
 							<span class="icon"><i class="fa-sharp fa-solid fa-envelope"></i></span>
 							<input type="email" name="email" id="email" required>
@@ -48,20 +48,27 @@
 					</div>
 					<div class="tab-pane fade" id="register" role="tabpanel" aria-labelledby="register-tab">
 					  <form>
-						<div class="input-box">
+						<div class="row">
+						<div class="input-box col input-margin">
 							<span class="icon"><i class="fa-solid fa-user"></i></span>
 							<input type="text" name="username" id="username" required>
 							<label for="username">Imię</label>
 						</div>
+						<div class="input-box col input-margin">
+							<span class="icon"><i class="fa-solid fa-user"></i></span>
+							<input type="text" name="lastname" id="lastname" required>
+							<label for="lastname">Nazwisko</label>
+						</div>
+					</div>
 						<div class="input-box">
 							<span class="icon"><i class="fa-sharp fa-solid fa-envelope"></i></span>
-							<input type="email" name="email" id="email" required>
-							<label for="email">Email</label>
+							<input type="email" name="email" id="emailReg" required>
+							<label for="emailReg">Email</label>
 						</div>
 						<div class="input-box">
 							<span class="icon"><i class="fa-solid fa-lock"></i></span>
-							<input type="password" name="password" id="password" required>
-							<label for="password">Hasło</label>
+							<input type="password" name="password" id="passwordReg" required>
+							<label for="passwordReg">Hasło</label>
 						</div>
 						
 						<button type="button" class="btn btn-submit" id="registerButton">Zarejestruj</button>
@@ -277,6 +284,7 @@
 		</nav>
 <!--END NAV -->
 
+
 		<header>
 <!-- CAROUSEL -->		
 		<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
@@ -294,7 +302,7 @@
 		</div>
 
 <!-- END carousel -->
-		
+	
 	<div class="container mainForm">
 	<div class="row">
 		<div class="col-12">
@@ -357,8 +365,8 @@
 						<label for="ticketType">Typ biletu:</label>
 							<select id="ticketType" name="ticketType" class="form-select" required>
 								<option value="">Wybierz typ biletu</option>
-							  <option value="one-way">Jedna strona</option>
-							  <option value="round-trip">Obie strony</option>
+							  <option value="Jedna-strona">Jedna strona</option>
+							  <option value="Obie-strony">Obie strony</option>
 							</select>
 						</div>
 				</div> 
@@ -459,21 +467,21 @@
 										<button id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
 									</div>
 									<div class="weather ">
-										<h2 class="city">Pogoda</h2>
-										<img src="./images/drizzle.png" class="weather-pic">
-											<div class=><h1 class="temp">21°C</h1></div>
-											<div class="description">Pochmurno</div>
+										<h2 class="city d-flex justify-content-center">Pogoda</h2>
+										<img src="./images/drizzle.586dab4fa773ec5fbaafe1efeb3ef0e3.png" class="weather-pic">
+											<div class="d-flex justify-content-center"><h1 class="temp">21°C</h1></div>
+											<div class="description d-flex justify-content-center">Pochmurno</div>
 											<div class="row ">
-												<div class="col">
-													<img src="./images/humidity.png" class="weather-icon" alt="">
-													<div class="humidity"> Wilgotność powietrza: 60%</div>
+												<div class="col d-flex justify-content-center align-items-center">
+													<img src="./images/humidity.d2cc9e96bd0844e3b354c67ff7fc2e93.png" class="weather-icon" alt="">
+													<div class="humidity d-flex justify-content-center align-items-center "> Wilgotność powietrza: 60%</div>
 												</div>
 												<div class="col ">
-													<img src="./images/wind.png" alt="" class="weather-icon">
+													<img src="./images/wind.55b42602bdae2534f283518856182070.png" alt="" class="weather-icon">
 													<div class="wind"> Prędkość wiatru: 6.2 km/h</div>
 												</div>
 											</div>
-										</div>
+									</div>
 									</div>
 								</div>
 							</div>
@@ -504,7 +512,11 @@
 			</div>
 		</div>
 	</section>
-	
+	<section >
+		<div class="container">
+			
+		</div>
+	</section>
 
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	</body>

@@ -19422,18 +19422,6 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 		};
 /******/ 	})();
 /******/ 	
-/******/ 	/* webpack/runtime/global */
-/******/ 	(() => {
-/******/ 		__webpack_require__.g = (function() {
-/******/ 			if (typeof globalThis === 'object') return globalThis;
-/******/ 			try {
-/******/ 				return this || new Function('return this')();
-/******/ 			} catch (e) {
-/******/ 				if (typeof window === 'object') return window;
-/******/ 			}
-/******/ 		})();
-/******/ 	})();
-/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -19452,22 +19440,7 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	
 /******/ 	/* webpack/runtime/publicPath */
 /******/ 	(() => {
-/******/ 		var scriptUrl;
-/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
-/******/ 		var document = __webpack_require__.g.document;
-/******/ 		if (!scriptUrl && document) {
-/******/ 			if (document.currentScript)
-/******/ 				scriptUrl = document.currentScript.src;
-/******/ 			if (!scriptUrl) {
-/******/ 				var scripts = document.getElementsByTagName("script");
-/******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
-/******/ 			}
-/******/ 		}
-/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
-/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
-/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
-/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
-/******/ 		__webpack_require__.p = scriptUrl;
+/******/ 		__webpack_require__.p = "../";
 /******/ 	})();
 /******/ 	
 /************************************************************************/
@@ -19482,18 +19455,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _api_key__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(64);
 /* harmony import */ var _currency_codes__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(65);
-/* harmony import */ var _src_images_rain_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(66);
-/* harmony import */ var _src_images_clouds_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(67);
-/* harmony import */ var _src_images_snow_png__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(68);
-/* harmony import */ var _src_images_mist_png__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(69);
-/* harmony import */ var _src_images_drizzle_png__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(70);
-/* harmony import */ var _src_images_clear_png__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(71);
-/* harmony import */ var _src_images_wind_png__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(72);
-/* harmony import */ var _src_images_fog_png__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(73);
-/* harmony import */ var _src_images_humidity_png__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(74);
-/* harmony import */ var _src_images_13_jpg__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(75);
-/* harmony import */ var _src_images_737_jpg__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(76);
-/* harmony import */ var _src_images_Embraer_ERJ_175_jpg__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(77);
+/* harmony import */ var _src_images_13_jpg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(75);
+/* harmony import */ var _src_images_737_jpg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(76);
+/* harmony import */ var _src_images_Embraer_ERJ_175_jpg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(77);
+/* harmony import */ var _src_images_rain_png__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(66);
+/* harmony import */ var _src_images_clouds_png__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(67);
+/* harmony import */ var _src_images_snow_png__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(68);
+/* harmony import */ var _src_images_mist_png__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(69);
+/* harmony import */ var _src_images_drizzle_png__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(70);
+/* harmony import */ var _src_images_clear_png__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(71);
+/* harmony import */ var _src_images_wind_png__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(72);
+/* harmony import */ var _src_images_fog_png__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(73);
+/* harmony import */ var _src_images_humidity_png__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(74);
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 function _regeneratorRuntime() { "use strict"; /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */ _regeneratorRuntime = function _regeneratorRuntime() { return exports; }; var exports = {}, Op = Object.prototype, hasOwn = Op.hasOwnProperty, defineProperty = Object.defineProperty || function (obj, key, desc) { obj[key] = desc.value; }, $Symbol = "function" == typeof Symbol ? Symbol : {}, iteratorSymbol = $Symbol.iterator || "@@iterator", asyncIteratorSymbol = $Symbol.asyncIterator || "@@asyncIterator", toStringTagSymbol = $Symbol.toStringTag || "@@toStringTag"; function define(obj, key, value) { return Object.defineProperty(obj, key, { value: value, enumerable: !0, configurable: !0, writable: !0 }), obj[key]; } try { define({}, ""); } catch (err) { define = function define(obj, key, value) { return obj[key] = value; }; } function wrap(innerFn, outerFn, self, tryLocsList) { var protoGenerator = outerFn && outerFn.prototype instanceof Generator ? outerFn : Generator, generator = Object.create(protoGenerator.prototype), context = new Context(tryLocsList || []); return defineProperty(generator, "_invoke", { value: makeInvokeMethod(innerFn, self, context) }), generator; } function tryCatch(fn, obj, arg) { try { return { type: "normal", arg: fn.call(obj, arg) }; } catch (err) { return { type: "throw", arg: err }; } } exports.wrap = wrap; var ContinueSentinel = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} var IteratorPrototype = {}; define(IteratorPrototype, iteratorSymbol, function () { return this; }); var getProto = Object.getPrototypeOf, NativeIteratorPrototype = getProto && getProto(getProto(values([]))); NativeIteratorPrototype && NativeIteratorPrototype !== Op && hasOwn.call(NativeIteratorPrototype, iteratorSymbol) && (IteratorPrototype = NativeIteratorPrototype); var Gp = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(IteratorPrototype); function defineIteratorMethods(prototype) { ["next", "throw", "return"].forEach(function (method) { define(prototype, method, function (arg) { return this._invoke(method, arg); }); }); } function AsyncIterator(generator, PromiseImpl) { function invoke(method, arg, resolve, reject) { var record = tryCatch(generator[method], generator, arg); if ("throw" !== record.type) { var result = record.arg, value = result.value; return value && "object" == _typeof(value) && hasOwn.call(value, "__await") ? PromiseImpl.resolve(value.__await).then(function (value) { invoke("next", value, resolve, reject); }, function (err) { invoke("throw", err, resolve, reject); }) : PromiseImpl.resolve(value).then(function (unwrapped) { result.value = unwrapped, resolve(result); }, function (error) { return invoke("throw", error, resolve, reject); }); } reject(record.arg); } var previousPromise; defineProperty(this, "_invoke", { value: function value(method, arg) { function callInvokeWithMethodAndArg() { return new PromiseImpl(function (resolve, reject) { invoke(method, arg, resolve, reject); }); } return previousPromise = previousPromise ? previousPromise.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg) : callInvokeWithMethodAndArg(); } }); } function makeInvokeMethod(innerFn, self, context) { var state = "suspendedStart"; return function (method, arg) { if ("executing" === state) throw new Error("Generator is already running"); if ("completed" === state) { if ("throw" === method) throw arg; return doneResult(); } for (context.method = method, context.arg = arg;;) { var delegate = context.delegate; if (delegate) { var delegateResult = maybeInvokeDelegate(delegate, context); if (delegateResult) { if (delegateResult === ContinueSentinel) continue; return delegateResult; } } if ("next" === context.method) context.sent = context._sent = context.arg;else if ("throw" === context.method) { if ("suspendedStart" === state) throw state = "completed", context.arg; context.dispatchException(context.arg); } else "return" === context.method && context.abrupt("return", context.arg); state = "executing"; var record = tryCatch(innerFn, self, context); if ("normal" === record.type) { if (state = context.done ? "completed" : "suspendedYield", record.arg === ContinueSentinel) continue; return { value: record.arg, done: context.done }; } "throw" === record.type && (state = "completed", context.method = "throw", context.arg = record.arg); } }; } function maybeInvokeDelegate(delegate, context) { var methodName = context.method, method = delegate.iterator[methodName]; if (undefined === method) return context.delegate = null, "throw" === methodName && delegate.iterator["return"] && (context.method = "return", context.arg = undefined, maybeInvokeDelegate(delegate, context), "throw" === context.method) || "return" !== methodName && (context.method = "throw", context.arg = new TypeError("The iterator does not provide a '" + methodName + "' method")), ContinueSentinel; var record = tryCatch(method, delegate.iterator, context.arg); if ("throw" === record.type) return context.method = "throw", context.arg = record.arg, context.delegate = null, ContinueSentinel; var info = record.arg; return info ? info.done ? (context[delegate.resultName] = info.value, context.next = delegate.nextLoc, "return" !== context.method && (context.method = "next", context.arg = undefined), context.delegate = null, ContinueSentinel) : info : (context.method = "throw", context.arg = new TypeError("iterator result is not an object"), context.delegate = null, ContinueSentinel); } function pushTryEntry(locs) { var entry = { tryLoc: locs[0] }; 1 in locs && (entry.catchLoc = locs[1]), 2 in locs && (entry.finallyLoc = locs[2], entry.afterLoc = locs[3]), this.tryEntries.push(entry); } function resetTryEntry(entry) { var record = entry.completion || {}; record.type = "normal", delete record.arg, entry.completion = record; } function Context(tryLocsList) { this.tryEntries = [{ tryLoc: "root" }], tryLocsList.forEach(pushTryEntry, this), this.reset(!0); } function values(iterable) { if (iterable) { var iteratorMethod = iterable[iteratorSymbol]; if (iteratorMethod) return iteratorMethod.call(iterable); if ("function" == typeof iterable.next) return iterable; if (!isNaN(iterable.length)) { var i = -1, next = function next() { for (; ++i < iterable.length;) if (hasOwn.call(iterable, i)) return next.value = iterable[i], next.done = !1, next; return next.value = undefined, next.done = !0, next; }; return next.next = next; } } return { next: doneResult }; } function doneResult() { return { value: undefined, done: !0 }; } return GeneratorFunction.prototype = GeneratorFunctionPrototype, defineProperty(Gp, "constructor", { value: GeneratorFunctionPrototype, configurable: !0 }), defineProperty(GeneratorFunctionPrototype, "constructor", { value: GeneratorFunction, configurable: !0 }), GeneratorFunction.displayName = define(GeneratorFunctionPrototype, toStringTagSymbol, "GeneratorFunction"), exports.isGeneratorFunction = function (genFun) { var ctor = "function" == typeof genFun && genFun.constructor; return !!ctor && (ctor === GeneratorFunction || "GeneratorFunction" === (ctor.displayName || ctor.name)); }, exports.mark = function (genFun) { return Object.setPrototypeOf ? Object.setPrototypeOf(genFun, GeneratorFunctionPrototype) : (genFun.__proto__ = GeneratorFunctionPrototype, define(genFun, toStringTagSymbol, "GeneratorFunction")), genFun.prototype = Object.create(Gp), genFun; }, exports.awrap = function (arg) { return { __await: arg }; }, defineIteratorMethods(AsyncIterator.prototype), define(AsyncIterator.prototype, asyncIteratorSymbol, function () { return this; }), exports.AsyncIterator = AsyncIterator, exports.async = function (innerFn, outerFn, self, tryLocsList, PromiseImpl) { void 0 === PromiseImpl && (PromiseImpl = Promise); var iter = new AsyncIterator(wrap(innerFn, outerFn, self, tryLocsList), PromiseImpl); return exports.isGeneratorFunction(outerFn) ? iter : iter.next().then(function (result) { return result.done ? result.value : iter.next(); }); }, defineIteratorMethods(Gp), define(Gp, toStringTagSymbol, "Generator"), define(Gp, iteratorSymbol, function () { return this; }), define(Gp, "toString", function () { return "[object Generator]"; }), exports.keys = function (val) { var object = Object(val), keys = []; for (var key in object) keys.push(key); return keys.reverse(), function next() { for (; keys.length;) { var key = keys.pop(); if (key in object) return next.value = key, next.done = !1, next; } return next.done = !0, next; }; }, exports.values = values, Context.prototype = { constructor: Context, reset: function reset(skipTempReset) { if (this.prev = 0, this.next = 0, this.sent = this._sent = undefined, this.done = !1, this.delegate = null, this.method = "next", this.arg = undefined, this.tryEntries.forEach(resetTryEntry), !skipTempReset) for (var name in this) "t" === name.charAt(0) && hasOwn.call(this, name) && !isNaN(+name.slice(1)) && (this[name] = undefined); }, stop: function stop() { this.done = !0; var rootRecord = this.tryEntries[0].completion; if ("throw" === rootRecord.type) throw rootRecord.arg; return this.rval; }, dispatchException: function dispatchException(exception) { if (this.done) throw exception; var context = this; function handle(loc, caught) { return record.type = "throw", record.arg = exception, context.next = loc, caught && (context.method = "next", context.arg = undefined), !!caught; } for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i], record = entry.completion; if ("root" === entry.tryLoc) return handle("end"); if (entry.tryLoc <= this.prev) { var hasCatch = hasOwn.call(entry, "catchLoc"), hasFinally = hasOwn.call(entry, "finallyLoc"); if (hasCatch && hasFinally) { if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0); if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc); } else if (hasCatch) { if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0); } else { if (!hasFinally) throw new Error("try statement without catch or finally"); if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc); } } } }, abrupt: function abrupt(type, arg) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.tryLoc <= this.prev && hasOwn.call(entry, "finallyLoc") && this.prev < entry.finallyLoc) { var finallyEntry = entry; break; } } finallyEntry && ("break" === type || "continue" === type) && finallyEntry.tryLoc <= arg && arg <= finallyEntry.finallyLoc && (finallyEntry = null); var record = finallyEntry ? finallyEntry.completion : {}; return record.type = type, record.arg = arg, finallyEntry ? (this.method = "next", this.next = finallyEntry.finallyLoc, ContinueSentinel) : this.complete(record); }, complete: function complete(record, afterLoc) { if ("throw" === record.type) throw record.arg; return "break" === record.type || "continue" === record.type ? this.next = record.arg : "return" === record.type ? (this.rval = this.arg = record.arg, this.method = "return", this.next = "end") : "normal" === record.type && afterLoc && (this.next = afterLoc), ContinueSentinel; }, finish: function finish(finallyLoc) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.finallyLoc === finallyLoc) return this.complete(entry.completion, entry.afterLoc), resetTryEntry(entry), ContinueSentinel; } }, "catch": function _catch(tryLoc) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.tryLoc === tryLoc) { var record = entry.completion; if ("throw" === record.type) { var thrown = record.arg; resetTryEntry(entry); } return thrown; } } throw new Error("illegal catch attempt"); }, delegateYield: function delegateYield(iterable, resultName, nextLoc) { return this.delegate = { iterator: values(iterable), resultName: resultName, nextLoc: nextLoc }, "next" === this.method && (this.arg = undefined), ContinueSentinel; } }, exports; }
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
@@ -19516,311 +19489,40 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 
 
-
-//// nav
 document.addEventListener('DOMContentLoaded', function () {
-  var nav = document.querySelector('.navbar');
-  function addShadow() {
-    if (window.scrollY >= 200) {
-      nav.classList.add('shadow-bg');
-    } else {
-      nav.classList.remove('shadow-bg');
-    }
-  }
-  window.addEventListener('scroll', addShadow);
-  document.querySelector('.navbar-toggler').onclick = function () {
-    nav.classList.toggle('shadow-bg-click');
-  };
-});
-///// search flights
-var searchFlightsBtn = document.getElementById('searchFlightBtn');
-var formSection = document.getElementById('formReservation');
-formSection.style.display = 'none';
-searchFlightsBtn.addEventListener('click', function () {
-  formSection.style.display = 'block';
-  formSection.scrollIntoView({
-    behavior: 'smooth'
-  });
-  var placeStart = document.getElementById('placeStart').value;
-  document.getElementById('start1').innerHTML = placeStart;
-  var placeEnd = document.getElementById('placeEnd').value;
-  document.getElementById('end1').innerHTML = placeEnd;
-});
+  var placeStart = localStorage.getItem('placeStart');
+  var placeEnd = localStorage.getItem('placeEnd');
+  var startDate = localStorage.getItem('startDate');
+  var endDate = localStorage.getItem('endDate');
+  var seatsNum = localStorage.getItem('seatsNum');
+  var selectedSeats = localStorage.getItem('selectedSeats');
+  var ticketType = localStorage.getItem('ticketType');
+  var ticketPrice = localStorage.getItem('ticketPrice');
 
-//date blocked
-var ticketTypeSelect = document.getElementById('ticketType');
-var startDateInput = document.getElementById('startDate');
-var startDatelabel = document.getElementById('startDateLabel');
-var endDateInput = document.getElementById('endDate');
-var endDateLabel = document.querySelector('.endDate');
-var dateEndSection = document.getElementById('dateEndSection');
-var startDateChanged = false;
-var endDateChanged = false;
-
-// Set minimum values of input fields to current date
-var today = new Date();
-var todayFormatted = formatDate(today);
-startDateInput.min = todayFormatted;
-endDateInput.min = todayFormatted;
-
-// Hide return date input field by default
-endDateInput.style.display = 'none';
-endDateLabel.style.display = 'none';
-
-// Show or hide return date input field depending on ticket type
-ticketTypeSelect.addEventListener('change', function () {
-  var ticketType = ticketTypeSelect.value;
-  if (ticketType === 'one-way') {
-    startDateInput.style.display = 'block';
-    startDatelabel.style.display = 'block';
-    startDateInput.required = true;
-    endDateInput.style.display = 'none';
-    endDateLabel.style.display = 'none';
-    endDateInput.required = false;
-    dateEndSection.style.display = 'none';
-  } else if (ticketType === 'round-trip') {
-    startDateInput.style.display = 'block';
-    startDatelabel.style.display = 'block';
-    startDateInput.required = true;
-    endDateInput.style.display = 'block';
-    endDateLabel.style.display = 'block';
-    endDateInput.required = true;
-    dateEndSection.style.display = 'block';
+  // Przypisanie wartości do elementów na stronie
+  document.getElementById('seatsSelected1').textContent = selectedSeats;
+  document.getElementById('placeStart1').textContent = placeStart;
+  document.getElementById('placeEnd1').textContent = placeEnd;
+  document.getElementById('startDate1').textContent = startDate;
+  document.getElementById('endDate1').textContent = endDate;
+  document.getElementById('seatsNum1').textContent = seatsNum;
+  document.getElementById('ticketType1').textContent = ticketType;
+  document.getElementById('ticketPrice1').textContent = ticketPrice;
+  var planePic = document.getElementById('planePic1');
+  if (placeStart === 'Katowice' && placeEnd === 'Warszawa') {
+    planePic.src = _src_images_Embraer_ERJ_175_jpg__WEBPACK_IMPORTED_MODULE_7__["default"];
+  } else if (placeStart === 'Katowice' && placeEnd === 'Kraków') {
+    planePic.src = _src_images_Embraer_ERJ_175_jpg__WEBPACK_IMPORTED_MODULE_7__["default"];
+  } else if (placeStart === 'Katowice' && placeEnd === 'Paryż') {
+    planePic.src = _src_images_737_jpg__WEBPACK_IMPORTED_MODULE_6__["default"];
+  } else if (placeStart === 'Katowice' && placeEnd === 'Nowy Jork') {
+    planePic.src = _src_images_13_jpg__WEBPACK_IMPORTED_MODULE_5__["default"];
   } else {
-    endDateInput.style.display = 'none';
-    endDateLabel.style.display = 'none';
-    startDateInput.style.display = 'none';
-    startDatelabel.style.display = 'none';
-    startDateInput.required = false;
-    endDateInput.required = false;
+    planePic.src = _src_images_13_jpg__WEBPACK_IMPORTED_MODULE_5__["default"];
   }
-});
-
-// Make end date input field depend on start date input field
-startDateInput.addEventListener('input', function () {
-  var startDate = new Date(startDateInput.value);
-  var endDate = new Date(startDate.getTime());
-  endDateInput.min = formatDate(endDate);
-  startDateChanged = true;
-  endDateInput.disabled = false;
-  if (endDateChanged && endDate < startDate) {
-    endDateInput.value = formatDate(startDate);
-  }
-});
-
-// Make start date input field depend on end date input field
-startDateInput.addEventListener('input', function () {
-  var endDate = new Date(endDateInput.value);
-  var startDate = new Date(startDateInput.value);
-  endDateChanged = true;
-  if (endDate < startDate) {
-    endDateInput.value = formatDate(startDate);
-  }
-});
-function formatDate(date) {
-  var year = date.getFullYear();
-  var month = String(date.getMonth() + 1).padStart(2, '0');
-  var day = String(date.getDate()).padStart(2, '0');
-  return "".concat(year, "-").concat(month, "-").concat(day);
-}
-
-/// number place select
-var numSeatsInput = document.getElementById('num-seats');
-var minusBtn = document.getElementById('minus-btn');
-var plusBtn = document.getElementById('plus-btn');
-minusBtn.addEventListener('click', function () {
-  // decrease the input value by 1, but not less than 1
-  numSeatsInput.value = Math.max(parseInt(numSeatsInput.value) - 1, 1);
-  // updating the maximum number of seats
-  maxNumSeats = parseInt(numSeatsInput.value);
-});
-plusBtn.addEventListener('click', function () {
-  //  increase the input value by 1
-  numSeatsInput.value = parseInt(numSeatsInput.value) + 1;
-  // updating the maximum number of seats
-  maxNumSeats = parseInt(numSeatsInput.value);
-});
-
-// we set the event listener to change the input value
-numSeatsInput.addEventListener('change', function () {
-  // updating the maximum number of seats
-  maxNumSeats = parseInt(numSeatsInput.value);
-});
-//// seats select
-var maxNumSeats = parseInt(numSeatsInput.value); // convert the string to a number
-var minNumSeats = parseInt(numSeatsInput.value); // convert the string to a number
-
-// find all checkboxes with places on the map
-var checkboxes = document.querySelectorAll(".plane .seats input[type='checkbox']");
-
-// set listening for events on each checkbox
-checkboxes.forEach(function (checkbox) {
-  checkbox.addEventListener('click', function () {
-    // find the number of places already selected
-    var selectedSeats = document.querySelectorAll(".plane .seats input[type='checkbox']:checked");
-    var numSelectedSeats = selectedSeats.length;
-
-    // check that the number of seats selected does not exceed the maximum number of seats specified by the user
-    if (numSelectedSeats > maxNumSeats) {
-      // show Alert
-      alert('Wybrano zbyt dużą liczbę miejsc!');
-      // display a notification
-      checkbox.checked = false;
-    } else {
-      // add class "selected"
-      checkbox.parentElement.classList.toggle('selected');
-    }
-    if (numSelectedSeats === maxNumSeats) {
-      saveButton.disabled = false;
-    }
-  });
-});
-var selectedSeats = [];
-var saveButton = document.querySelector('#reserve-button');
-var myModal = document.getElementById('seatSelectModal');
-
-/// save checked seats to array
-saveButton.addEventListener('click', function () {
-  clearSelectedSeats(); // clear selected seats before adding new ones
-  var checkedCheckboxes = document.querySelectorAll('.plane .seats input[type="checkbox"]:checked');
-  var checkedSeats = Array.from(checkedCheckboxes).map(function (checkbox) {
-    return checkbox.value;
-  });
-  selectedSeats = selectedSeats.concat(checkedSeats);
-  closeModal();
-});
-function closeModal() {
-  // close modal
-  $(myModal).modal('hide');
-  alert("Wybrane miejsca to: ".concat(selectedSeats.join(', ')));
-}
-// clear selected seats array
-function clearSelectedSeats() {
-  selectedSeats = [];
-}
-///// disable/enable option
-var input1 = document.querySelector('#placeEnd');
-input1.addEventListener('input', function () {
-  var input2 = document.querySelector('#ticketType');
-  input2.disabled = false;
-});
-var input3 = document.querySelector('#startDate');
-input3.addEventListener('input', function () {
-  var input4btn = document.querySelector('#minus-btn');
-  var input4btnPlus = document.querySelector('#plus-btn');
-  var input4 = document.querySelector('#num-seats');
-  input4.disabled = false;
-  input4btn.disabled = false;
-  input4btnPlus.disabled = false;
-});
-
-////  summary info
-
-var summaryButton = document.getElementById('summary');
-var summaryInfo = document.querySelector('.summary-info');
-summaryInfo.style.display = 'none';
-summaryButton.addEventListener('click', function () {
-  var placeStart = document.getElementById('placeStart').value;
-  var placeEnd = document.getElementById('placeEnd').value;
-  var startDate = document.getElementById('startDate').value;
-  var endDate = document.getElementById('endDate').value;
-  var seatsNum = document.getElementById('num-seats').value;
-  var seatSelected = selectedSeats.join(', ');
-  summaryInfo.style.display = 'block'; ///visible summary info section
-  summaryInfo.classList.toggle('fade-in');
-  document.getElementById('start').innerHTML = placeStart;
-  document.getElementById('end').innerHTML = placeEnd;
-  document.getElementById('dateStart').innerHTML = startDate;
-  document.getElementById('dateEnd').innerHTML = endDate;
-  document.getElementById('numSeats').innerHTML = seatsNum;
-  document.getElementById('seatsSelected').innerHTML = seatSelected;
-  calcPrice();
   checkWeather(placeEnd);
 });
-summaryButton.onclick = function () {
-  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(window.navigator.userAgent)) {
-    summaryInfo.scrollIntoView({
-      behavior: 'smooth'
-    });
-  }
-};
 
-//// price
-var price = 0;
-function calcPrice() {
-  var airportStart = document.getElementById('placeStart').value;
-  var airportEnd = document.getElementById('placeEnd').value;
-  var ticketType = document.getElementById('ticketType').value;
-  var ticketNumber = document.getElementById('num-seats').value;
-  var planePic = document.getElementById('airplanePic');
-  if (airportStart === 'Katowice' && airportEnd === 'Warszawa') {
-    price = 300;
-    planePic.src = _src_images_Embraer_ERJ_175_jpg__WEBPACK_IMPORTED_MODULE_16__["default"];
-  } else if (airportStart === 'Katowice' && airportEnd === 'Kraków') {
-    price = 200;
-    planePic.src = _src_images_Embraer_ERJ_175_jpg__WEBPACK_IMPORTED_MODULE_16__["default"];
-  } else if (airportStart === 'Katowice' && airportEnd === 'Paryż') {
-    price = 860;
-    planePic.src = _src_images_737_jpg__WEBPACK_IMPORTED_MODULE_15__["default"];
-  } else if (airportStart === 'Katowice' && airportEnd === 'Nowy Jork') {
-    price = 1260;
-    planePic.src = _src_images_13_jpg__WEBPACK_IMPORTED_MODULE_14__["default"];
-  } else {
-    price = 0;
-  }
-  if (ticketType === 'round-trip') {
-    price = price * 2;
-  }
-  price = price * ticketNumber;
-  if (document.getElementById('luggage').checked) {
-    price = price + 150 * ticketNumber;
-  }
-  document.getElementById('ticketPrice').innerHTML = price + ' zł';
-  var ammount = document.querySelector('#ammount').value = price;
-}
-
-/// currency converter
-var api = "https://v6.exchangerate-api.com/v6/".concat(_api_key__WEBPACK_IMPORTED_MODULE_3__.apiKeyCurrency, "/latest/USD");
-var formDropDown = document.getElementById('fromCurrencySelect');
-var toDropDown = document.getElementById('toCurrencySelect');
-
-///create dropdown from the currencies array
-_currency_codes__WEBPACK_IMPORTED_MODULE_4__.currencies.forEach(function (currency) {
-  var option = document.createElement('option');
-  option.value = currency;
-  option.text = currency;
-  formDropDown.add(option);
-});
-_currency_codes__WEBPACK_IMPORTED_MODULE_4__.currencies.forEach(function (currency) {
-  var option = document.createElement('option');
-  option.value = currency;
-  option.text = currency;
-  toDropDown.add(option);
-});
-
-/// set default value
-formDropDown.value = 'PLN';
-toDropDown.value = 'EUR';
-var convertCurrency = function convertCurrency() {
-  /// Create References
-  var ammount = document.querySelector('#ammount').value = price;
-  var fromCurrency = formDropDown.value;
-  var toCurrency = toDropDown.value;
-  var result = document.querySelector('#result');
-  if (ammount.length != 0) {
-    fetch(api).then(function (resp) {
-      return resp.json();
-    }).then(function (data) {
-      var fromExchangeRate = data.conversion_rates[fromCurrency];
-      var toExchangeRate = data.conversion_rates[toCurrency];
-      var convertedAmmount = ammount / fromExchangeRate * toExchangeRate;
-      result.innerHTML = "".concat(ammount, " ").concat(fromCurrency, " = ").concat(convertedAmmount.toFixed(2), " ").concat(toCurrency);
-    });
-  } else {
-    alert('Wypełnij pole');
-  }
-};
-document.querySelector('#convertButton').addEventListener('click', convertCurrency);
 ///// weather
 var searchBox = document.querySelector('.searchBar');
 var searchBtn = document.querySelector('#searchBtn');
@@ -19843,34 +19545,33 @@ function _checkWeather() {
           return response.json();
         case 5:
           data = _context.sent;
-          console.log(data);
           document.querySelector('.city').innerHTML = data.name;
           document.querySelector('.temp').innerHTML = Math.round(data.main.temp) + '°C';
           document.querySelector('.humidity').innerHTML = 'Wilgotność powietrza ' + data.main.humidity + '%';
           document.querySelector('.wind').innerHTML = 'Prędkość wiatru ' + data.wind.speed + ' km/h';
           document.querySelector('.description').innerHTML = data.weather[0].description;
           if (data.weather[0].main === 'Clouds') {
-            weatherIcon.src = _src_images_clouds_png__WEBPACK_IMPORTED_MODULE_6__["default"];
+            weatherIcon.src = _src_images_clouds_png__WEBPACK_IMPORTED_MODULE_9__["default"];
           } else if (data.weather[0].main === 'Rain') {
-            weatherIcon.src = _src_images_rain_png__WEBPACK_IMPORTED_MODULE_5__["default"];
+            weatherIcon.src = _src_images_rain_png__WEBPACK_IMPORTED_MODULE_8__["default"];
           } else if (data.weather[0].main === 'Snow') {
-            weatherIcon.src = _src_images_snow_png__WEBPACK_IMPORTED_MODULE_7__["default"];
+            weatherIcon.src = _src_images_snow_png__WEBPACK_IMPORTED_MODULE_10__["default"];
           } else if (data.weather[0].main === 'Mist') {
-            weatherIcon.src = _src_images_mist_png__WEBPACK_IMPORTED_MODULE_8__["default"];
+            weatherIcon.src = _src_images_mist_png__WEBPACK_IMPORTED_MODULE_11__["default"];
           } else if (data.weather[0].main === 'Clear') {
-            weatherIcon.src = _src_images_clear_png__WEBPACK_IMPORTED_MODULE_10__["default"];
+            weatherIcon.src = _src_images_clear_png__WEBPACK_IMPORTED_MODULE_13__["default"];
           } else if (data.weather[0].main === 'Wind') {
-            weatherIcon.src = _src_images_wind_png__WEBPACK_IMPORTED_MODULE_11__["default"];
+            weatherIcon.src = _src_images_wind_png__WEBPACK_IMPORTED_MODULE_14__["default"];
           } else if (data.weather[0].main === 'Fog') {
-            weatherIcon.src = _src_images_humidity_png__WEBPACK_IMPORTED_MODULE_13__["default"];
+            weatherIcon.src = _src_images_humidity_png__WEBPACK_IMPORTED_MODULE_16__["default"];
           } else if (data.weather[0].main === 'Wind') {
-            weatherIcon.src = _src_images_wind_png__WEBPACK_IMPORTED_MODULE_11__["default"];
+            weatherIcon.src = _src_images_wind_png__WEBPACK_IMPORTED_MODULE_14__["default"];
           } else {
             // jeśli pogoda nie pasuje do powyższych warunków,
             // można ustawić domyślny obrazek
-            weatherIcon.src = _src_images_clouds_png__WEBPACK_IMPORTED_MODULE_6__["default"];
+            weatherIcon.src = _src_images_clouds_png__WEBPACK_IMPORTED_MODULE_9__["default"];
           }
-        case 13:
+        case 12:
         case "end":
           return _context.stop();
       }
@@ -19890,4 +19591,4 @@ searchBox.addEventListener('keydown', function (event) {
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle.js.map
+//# sourceMappingURL=podsumowanie.js.map

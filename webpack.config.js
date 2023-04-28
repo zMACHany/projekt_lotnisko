@@ -2,10 +2,13 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
 module.exports = {
-	entry: './src/index.js',
+	entry: {
+		index:'./src/index.js',
+		podsumowanie:'./src/podsumowanie.js',
+	},
 	output: {
 		path: path.resolve(__dirname, 'dist'),
-		filename: 'bundle.js',
+		filename: '[name].js',
 	},
 	devtool: 'source-map',
 	devServer: {
@@ -16,10 +19,18 @@ module.exports = {
 		compress: true,
 		port: 3300,
 		hot: false,
+		historyApiFallback: true,
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
 			template: './src/index.html',
+			filename: 'index.html',
+			chunks:['index']
+		}),
+		new HtmlWebpackPlugin({
+			template: './src/podsumowanie.html',
+			filename: 'podsumowanie.html',
+			chunks:['podsumowanie'],
 		}),
 		new MiniCssExtractPlugin(),
 	],
@@ -43,12 +54,13 @@ module.exports = {
 				],
 			},
 			{
-				test: /\.js$/,
+				test: /\.(js|mjs|jsx|ts|tsx)$/,
 				exclude: /node_modules/,
 				use: {
 					loader: 'babel-loader',
 					options: {
 						presets: ['@babel/preset-env'],
+						plugins: ['@babel/plugin-syntax-top-level-await'],
 					},
 				},
 			},
@@ -65,5 +77,8 @@ module.exports = {
 				],
 			},
 		],
+	},
+	experiments: {
+		topLevelAwait: true,
 	},
 };
