@@ -8513,7 +8513,8 @@ textarea.form-control-lg {
 
 .carousel {
   position: relative;
-  height: 100vh; }
+  height: -moz-fit-content;
+  height: fit-content; }
 
 .carousel-item {
   height: 100vh;
@@ -8538,11 +8539,13 @@ textarea.form-control-lg {
 
 header {
   position: relative;
-  height: 100vh;
+  height: -moz-fit-content;
+  height: fit-content;
   overflow: hidden; }
 
 section {
-  height: 100vh; }
+  height: -moz-fit-content;
+  height: fit-content; }
 
 .mainForm {
   position: absolute;
@@ -8815,6 +8818,8 @@ select {
   .hero-form {
     width: 90%;
     margin: 20px; }
+  .carousel-item {
+    height: 180vh; }
   .right-text {
     display: none; }
   .main-heading {
@@ -8829,11 +8834,13 @@ select {
   .top-text {
     display: none; } }
 
-@media only screen and (min-width: 767px) and (max-width: 1000px) {
+@media only screen and (min-width: 767px) and (max-width: 940px) {
   .main-heading {
-    font-size: 2.3rem; } }
+    font-size: 2.3rem; }
+  .carousel-item {
+    height: 180vh; } }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 940px) {
   .slider {
     position: absolute;
     margin-top: -250px; } }
